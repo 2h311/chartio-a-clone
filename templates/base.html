@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>hello world</title>
-</head>
-<body>
-	{% block content %}{% endblock %}
+<html lang="en-US">
 
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- make it responsive -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- title, description -->
+		<title>
+			{% block title %} Cloud-based data analytics exploration for all |
+			Chartio{% endblock %}
+		</title>
+		<meta name="description"
+			content="Chartio’s cloud-based business intelligence and analytics solution enables everyone to analyze their data from their business applications." />
+		<!-- favicon -->
+		<link rel="shortcut icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon" />
+		<!-- CSS -->
+		<!-- FONTS -->
+		<!-- SEO -->
+		<!-- TWITTER STUFF -->
+		<!-- FACEBOOK STUFF -->
+
+
+	</head>
+
+	<body>
+		{% block content %}{% endblock %}
+	</body>
+
 </html>

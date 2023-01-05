@@ -8,23 +8,117 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- title, description -->
 		<title>
-			{% block title %} Cloud-based data analytics exploration for all |
-			Chartio{% endblock %}
+			{% block title %}
+			Cloud-based data analytics exploration for all | Chartio
+			{% endblock %}
 		</title>
 		<meta name="description"
 			content="Chartio’s cloud-based business intelligence and analytics solution enables everyone to analyze their data from their business applications." />
+
 		<!-- favicon -->
 		<link rel="shortcut icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon" />
+
 		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" integrity="sha256-Yq3SSBaNF2BohltSYjQpQ5LvhnNvqyPmbFyZhTmHmU4="
+			href="{{ url_for('static', path='/normalize.min-62add248168d176068865b526234294392ef86736fab23e66c5c99853987994e.css') }}" />
+		<link rel="stylesheet" type="text/css" integrity="sha256-GXn2WAcb6/0I8g3H5KqpTPVuAkVwtIG3gCFya+CV04c="
+			href="{{ url_for('static', path='/main-v2-1979f658071bebfd08f20dc7e4aaa94cf56e024570b481b78021726be095d387.css') }}" />
+
 		<!-- FONTS -->
 		<!-- SEO -->
+		<link rel="canonical" href="https://chartio.deta.dev/">
+		<!-- <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="The Chartio Blog" /> -->
+		<meta name="msvalidate.01" content="F859F6E1C72C21D1589B543B3038525C" />
+		<meta name="ahrefs-site-verification" content="dced947b31c30d02b66c9e8feca664b489b8420f938b68087b03ba6f02dc3625" />
+
 		<!-- TWITTER STUFF -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@chartio" />
+		<meta name="twitter:site:id" content="@chartio" />
+		<meta name="twitter:creator" content="@chartio" />
+		<meta name="twitter:title" content="Cloud-based data analytics exploration for all | Chartio - clone" />
+		<meta name="twitter:description"
+			content="Chartio’s cloud-based business intelligence and analytics solution enables everyone to analyze their data from their business applications." />
+		<meta name="twitter:url" content="https://chartio.deta.dev/" />
+
 		<!-- FACEBOOK STUFF -->
-
-
+		<meta name="og:url" content="https://chartio.deta.dev/" />
+		<meta name="og:type" content="article" />
+		<meta name="og:title" content="Cloud-based data analytics exploration for all | Chartio - clone" />
+		<meta name="og:description"
+			content="Chartio’s cloud-based business intelligence and analytics solution enables everyone to analyze their data from their business applications." />
+		<meta name="og:locale" content="en_US" />
+		<meta name="og:site_name" content="chartio" />
+		<meta name="fb:app_id" content="272818703163824" />
+		<meta name="article:publisher" content="https://chartio.deta.dev/" />
+		<!-- IMAGE -->
+		<meta property="og:image" content="{{ url_for('static', path='/images/og-image-vsql.png') }}" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta property="og:image:width" content="1040" />
+		<meta property="og:image:height" content="550" />
 	</head>
 
 	<body>
+		{% block nav %}
+		<div class="nav__holder">
+			<div class="nav">
+
+				<nav class="nav__main">
+					<div class="nav__left">
+						<div class="nav__logo-wrapper">
+							<a href="/" class="logo" title="Chartio home">
+								<img src="{{ url_for('static', path='/logo/chartio-logo-black-tbg.svg') }}" alt="chartio home logo"
+									class="nav__logo">
+							</a>
+						</div>
+
+						<ul class="nav__main">
+							<li class="nav__list-item">
+								<a class="nav__link link__block" href="/docs/" title="Documentation"><span>Documentation</span></a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__link link__block" href="/product/support" title="Support"><span>Support</span></a>
+							</li>
+							<li class="nav__list-item">
+								<a class="nav__link link__block" href="/blog/" title="Blog"><span>Blog</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav__right">
+						<a href="/login/" id="login" class="button button--primay">Login</a>
+					</div>
+				</nav>
+
+				<nav class="nav__mobile">
+					<a href="/" class="flex" title="chartio home">
+						<img class="nav__logo" src="{{ url_for('static', path='logo/chartio-logo-black-tbg.svg') }}"
+							alt="chartio home logo">
+					</a>
+					<button class="button button--secondary" id="nav-menu-btn"><span>Menu</span></button>
+				</nav>
+			</div>
+			<div class="nav__mobile-wrapper" id="mobile-menu">
+				<ul class="nav__mobile-open">
+					<li class="nav__mobile-item">
+						<a class="nav__mobile-link" href="/docs/">Documentation</a>
+					</li>
+					<li class="nav__mobile-item">
+						<a class="nav__mobile-link" href="/product/support">Support</a>
+					</li>
+					<li class="nav__mobile-item">
+						<a class="nav__mobile-link" href="/blog/">Blog</a>
+					</li>
+					<li class="nav__mobile-item">
+						<hr class="nav__mobile-line">
+					</li>
+					<li class="nav__mobile-item">
+						<a class="button button--primary width-100" style="max-width: 10rem;" href="/login/">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		{% endblock %}
+
 		{% block content %}{% endblock %}
 	</body>
 

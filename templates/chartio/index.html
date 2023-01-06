@@ -7,13 +7,92 @@
   <div class="container">
     <div class="row margin-top-3 home__image-row">
       <div class="col-12 flex-hv-center relative">
+        <picture>
+          <source
+            srcset="{{ url_for('static', path='/final/486f99c8ab96c11ea8e1389f8b5c799f5aa7941319220a3537073e65877e456d/banner@2x.webp') }} 2x, {{ url_for('static', path='/final/09564a744e039c36d7c8a46617a9450cf48c3caac3c83cd4118869a604d3cc0d/banner.webp') }} 1x"
+            type="image/webp">
+          <source
+            srcset="{{ url_for('static', path='/final/f078f4b0bbd83472523a9d279a88514e33ae05412464ce5f457e596c8ee90f5f/banner@2x.png') }} 2x, {{ url_for('static', path='/final/5c8ff76d380586403cec08eab9238905b238197fb109e8250b436d6ce8359775/banner.png') }} 1x"
+            type="image/png">
+          <img
+            srcset="{{ url_for('static', path='/final/f078f4b0bbd83472523a9d279a88514e33ae05412464ce5f457e596c8ee90f5f/banner@2x.png') }} 2x, {{ url_for('static', path='/final/5c8ff76d380586403cec08eab9238905b238197fb109e8250b436d6ce8359775/banner.png') }} 1x"
+            src="{{ url_for('static', path='/final/5c8ff76d380586403cec08eab9238905b238197fb109e8250b436d6ce8359775/banner.png') }}"
+            alt="Chartion + Atlassion banner" class="image">
+        </picture>
 
         <picture>
           <source
-            srcset="/assets/final/486f99c8ab96c11ea8e1389f8b5c799f5aa7941319220a3537073e65877e456d/banner@2x.webp 2x"
+            srcset="{{ url_for('static', path='/final/e70d0d4398e416635f45965fcbfddf215c86a100928bae5e941ced71fa1a6f39/dashboard@2x.webp') }} 2x, {{ url_for('static', path='/final/93d3899e7f8857e6c6a16f890e2081591530999836ac6f2e330026ea02b6f41a/dashboard.webp') }} 1x"
             type="image/webp">
+          <source
+            srcset="{{ url_for('static', path='/final/e5a5aae927d72a9c91fdbe0b91d632dc6a64d26236966c08998a58b14bf5286d/dashboard@2x.png') }} 2x, {{ url_for('static', path='/final/93766e646a69d1254fb000a427b104cf2902267b5d4dd6ab37b82c4eeb2094a6/dashboard.png') }} 1x"
+            type="image/png">
+          <img
+            srcset="{{ url_for('static', path='/final/e5a5aae927d72a9c91fdbe0b91d632dc6a64d26236966c08998a58b14bf5286d/dashboard@2x.png') }} 2x, {{ url_for('static', path='/final/93766e646a69d1254fb000a427b104cf2902267b5d4dd6ab37b82c4eeb2094a6/dashboard.png') }} 1x,"
+            src=" {{ url_for('static', path='/final/93766e646a69d1254fb000a427b104cf2902267b5d4dd6ab37b82c4eeb2094a6/dashboard.png') }}"
+            alt="Dashboard Illustration" class="image home__image">
         </picture>
+      </div>
+    </div>
 
+    <div class="row margin-bottom-3">
+      <div class="col-12 col-md-10 offset-md-1 font-center">
+        <h1 class="text__main heading__1">Chartio is going away March 1, 2022</h1>
+      </div>
+      <div class="col-12 col-md-8 offset-md-2 font-center">
+        <p class="text__main text--bm margin-bottom-1">
+          Chartio has joined Atlassian! For over a decade, we have loved serving tens of millions of charts on millions
+          of dashboards for thousands of incredible companies. All of you have helped us create a product that truly
+          enables anyone in a company, not just data teams, to explore and understand their data.
+        </p>
+        <p class="text__main text--bm margin-bottom-1">
+          We are excited to announce that we have joined
+          <a class="link__inline" href="https://www.atlassian.com/">Atlassian</a>
+          and are now focused on bringing our technology to their audience and platform.
+        </p>
+        <a href="/blog/atlassian/" class="text__main text--bm link__inline">
+          See the full announcement for more details
+          <span class="page-icon page-icon--size-067">
+            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.85414 12.2366L13.8179 6.27286L7.85414 0.309082L6.70357 1.45326L10.6986 5.44189H0.663086V7.10383H10.6986L6.70357 11.0989L7.85414 12.2366Z"
+                fill="#2872E1" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="home__wrapper">
+    <div class="container">
+      <div class="row padding-top-1">
+        <div class="col-12 col-md-8 offset-md-2 font-center">
+          <p class="text__main text--bm margin-bottom-1">
+            We know this isn’t easy on our customers, so we’ve started a guide and outline of support to help with this
+            migration.
+          </p>
+        </div>
+      </div>
+      <div class="row margin-bottom-1">
+        <div class="col-12 flex-hv-center">
+          <a href="/docs/migration-guide" class="button button--primary home__button">
+            See the Migration Guide for support
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 flex-hv-center">
+          <source
+            srcset="{{ url_for('static', path='/final/dacb5df2e3a21a8aaa9f0a67d4d6f7536950f945378bcd0e82f8514abdeac97d/notebook@2x.webp') }} 2x, {{ url_for('static', path='') }} 1x"
+            type="image/webp">
+          <source
+            srcset="{{ url_for('static', path='/final/ef4f868df11b643e64bd5f63afc62cf2b67346e5d2d0fd23c4ae5fac0f537a4a/notebook@2x.png') }} 2x, {{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }} 1x"
+            src="{{ url_for('static', path='') }}" type="image/png">
+          <img
+            srcset="{{ url_for('static', path='/final/ef4f868df11b643e64bd5f63afc62cf2b67346e5d2d0fd23c4ae5fac0f537a4a/notebook@2x.png') }} 2x, {{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }} 1x"
+            src="{{ url_for('static', path='') }}" alt="Notebook Illustration" class="image">
+        </div>
       </div>
     </div>
   </div>

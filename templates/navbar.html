@@ -1,0 +1,59 @@
+{% block nav %}
+<div class="nav__holder">
+  <div class="nav">
+
+    <nav class="nav__main">
+      <div class="nav__left">
+        <div class="nav__logo-wrapper">
+          <a href="/" class="logo" title="Chartio home">
+            <img src="{{ url_for('static', path='/logo/chartio-logo-black-tbg.svg') }}" alt="chartio home logo"
+              class="nav__logo">
+          </a>
+        </div>
+
+        <ul class="nav__main">
+          <li class="nav__list-item">
+            <a class="nav__link link__block" href="/docs/" title="Documentation"><span>Documentation</span></a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link link__block" href="/product/support" title="Support"><span>Support</span></a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link link__block" href="/blog/" title="Blog"><span>Blog</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__right">
+        <a href="/login/" id="login" class="button button--primay">Login</a>
+      </div>
+    </nav>
+
+    <nav class="nav__mobile">
+      <a href="/" class="flex" title="chartio home">
+        <img class="nav__logo" src="{{ url_for('static', path='logo/chartio-logo-black-tbg.svg') }}"
+          alt="chartio home logo">
+      </a>
+      <button class="button button--secondary" id="nav-menu-btn"><span>Menu</span></button>
+    </nav>
+  </div>
+  <div class="nav__mobile-wrapper" id="mobile-menu">
+    <ul class="nav__mobile-open">
+      <li class="nav__mobile-item">
+        <a class="nav__mobile-link" href="/docs/">Documentation</a>
+      </li>
+      <li class="nav__mobile-item">
+        <a class="nav__mobile-link" href="/product/support">Support</a>
+      </li>
+      <li class="nav__mobile-item">
+        <a class="nav__mobile-link" href="/blog/">Blog</a>
+      </li>
+      <li class="nav__mobile-item">
+        <hr class="nav__mobile-line">
+      </li>
+      <li class="nav__mobile-item">
+        <a class="button button--primary width-100" style="max-width: 10rem;" href="/login/">Login</a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

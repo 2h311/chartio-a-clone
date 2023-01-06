@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello world, are you there?</h1>
+{% include "navbar.html" %}
+
+<div class="global-content">
+  <div class="container">
+    <div class="row margin-top-3 home__image-row">
+      <div class="col-12 flex-hv-center relative">
+
+        <picture>
+          <source
+            srcset="/assets/final/486f99c8ab96c11ea8e1389f8b5c799f5aa7941319220a3537073e65877e456d/banner@2x.webp 2x"
+            type="image/webp">
+        </picture>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
 {% endblock %}

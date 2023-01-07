@@ -22,7 +22,7 @@
 
         <picture>
           <source
-            srcset="{{ url_for('static', path='/final/e70d0d4398e416635f45965fcbfddf215c86a100928bae5e941ced71fa1a6f39/ @2x.webp') }} 2x, {{ url_for('static', path='/final/93d3899e7f8857e6c6a16f890e2081591530999836ac6f2e330026ea02b6f41a/dashboard.webp') }} 1x"
+            srcset="{{ url_for('static', path='/final/e70d0d4398e416635f45965fcbfddf215c86a100928bae5e941ced71fa1a6f39/dashboard@2x.webp') }} 2x, {{ url_for('static', path='/final/93d3899e7f8857e6c6a16f890e2081591530999836ac6f2e330026ea02b6f41a/dashboard.webp') }} 1x"
             type="image/webp">
           <source
             srcset="{{ url_for('static', path='/final/e5a5aae927d72a9c91fdbe0b91d632dc6a64d26236966c08998a58b14bf5286d/dashboard@2x.png') }} 2x, {{ url_for('static', path='/final/93766e646a69d1254fb000a427b104cf2902267b5d4dd6ab37b82c4eeb2094a6/dashboard.png') }} 1x"
@@ -83,20 +83,62 @@
       </div>
       <div class="row">
         <div class="col-12 flex-hv-center">
-          <source
-            srcset="{{ url_for('static', path='/final/dacb5df2e3a21a8aaa9f0a67d4d6f7536950f945378bcd0e82f8514abdeac97d/notebook@2x.webp') }} 2x, {{ url_for('static', path='') }} 1x"
-            type="image/webp">
-          <source
-            srcset="{{ url_for('static', path='/final/ef4f868df11b643e64bd5f63afc62cf2b67346e5d2d0fd23c4ae5fac0f537a4a/notebook@2x.png') }} 2x, {{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }} 1x"
-            src="{{ url_for('static', path='') }}" type="image/png">
-          <img
-            srcset="{{ url_for('static', path='/final/ef4f868df11b643e64bd5f63afc62cf2b67346e5d2d0fd23c4ae5fac0f537a4a/notebook@2x.png') }} 2x, {{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }} 1x"
-            src="{{ url_for('static', path='') }}" alt="Notebook Illustration" class="image">
+          <picture>
+            <source
+              srcset="{{ url_for('static', path='/final/dacb5df2e3a21a8aaa9f0a67d4d6f7536950f945378bcd0e82f8514abdeac97d/notebook@2x.webp') }} 2x, {{ url_for('static', path='/final/336e3060bd7453bb3ac615a1a7a58f738e02c63e54d8a59073e906a67631bb80/notebook.webp') }} 1x"
+              type="image/webp">
+            <source
+              srcset="{{ url_for('static', path='/final/ef4f868df11b643e64bd5f63afc62cf2b67346e5d2d0fd23c4ae5fac0f537a4a/notebook@2x.png') }} 2x, {{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }} 1x"
+              type="image/png">
+            <img
+              srcset="{{ url_for('static', path='/final/ef4f868df11b643e64bd5f63afc62cf2b67346e5d2d0fd23c4ae5fac0f537a4a/notebook@2x.png') }} 2x, {{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }} 1x"
+              src="{{ url_for('static', path='/final/67116996e952843ec0810340a7fc71cd6ed640456b1604167bab341085c12a5e/notebook.png') }}"
+              alt="Notebook Illustration" class="image">
+          </picture>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<div id="ck-test-modal-var-1" class="ck-test-modal__wrapper display-none">
+  <div class="ck-test-modal">
+    <div class="ck-test-modal__close-button" onclick="closeCkTestForm(1)">
+      <span class="page-icon page-icon--size-083">
+        <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1 1 10 10m0-10-10 10" stroke="#687299" />
+        </svg>
+      </span>
+    </div>
+    <div class="ck-test-modal__header ck-test-modal__header--blue">
+      <h2 class="ck-test-modal__title">Get a demo of Chartio</h2>
+      <p class="ck-test-modal__subtitle ck-test-modal__subtitle--short">
+        In this 15 minute demo, you’ll see how you can create an interactive dashboard to get answers first.
+      </p>
+    </div>
+    <div class="ck-test-modal__body">
+      <div id="ck-test-modal-form-var-1" class="ck-test-modal__form signup-demo"></div>
+    </div>
+  </div>
+</div>
+
+<div id="ck-test-modal-var-2" class="ck-test-modal__wrapper display-none">
+  <div class="ck-test-modal">
+    <div class="ck-test-modal__close-button" onclick="closeCkTestForm(2)">
+      <span class="page-icon page-icon--size-083">
+        <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1 1 10 10m0-10-10 10" stroke="#687299" />
+        </svg>
+      </span>
+    </div>
+    <div class="ck-test-modal__header">
+      <h2 class="ck-test-modal__title">Learn the importance of a great data stack.</h2>
+      <p class="ck-test-modal__subtitle">
+        Download our free cloud data management ebook and learn how to manage your data stack and set up processes to
+        get the most our of your data in your organization.
+      </p>
+    </div>
+  </div>
+</div>
 {% include "footer.html" %}
 {% endblock %}

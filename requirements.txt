@@ -2,3 +2,4 @@ deta
 fastapi
 jinja2
 aiofiles
+uvicorn

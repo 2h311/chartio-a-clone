@@ -31,3 +31,8 @@ async def login(request: Request):
     return templates.TemplateResponse(
         "chartio/login.html", context={"request": request}
     )
+
+
+@app.get("/users/password/reset/")
+async def password_reset(request: Request):
+    return templates.TemplateResponse("chartio/password_reset.html", context={"request": request})

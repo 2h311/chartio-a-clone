@@ -1,19 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "bases/password_base.html" %}
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-language" content="en-us">
+{% block extras %}
+<script>
+  function onSubmit() {
+    document.getElementById("chartioSubmit").disabled = true;
+    return true;
+  }
+</script>
+{% endblock %}
 
-    <link rel="shortcut icon" href="favicon.ico" sizes="16x16 32x32" type="image/png">
+{% block body_content %}
+<div id="content" class="container center-vertically">
+  <div class="container center-vertically">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 centered">
+        <div class="window-form login">
+          <div class="text-center">
+            <img src="{{ url_for('static', path='/app/images/chartio-logo.png') }}" alt="chartio" class="loginLogo">
+            <div class="messages">
+              <span class="welcome">Welcome back to Chartio</span>
+            </div>
+          </div>
+          <form action="/login/google/" id="googleAuth" target="_top">
+            <input type="hidden" name="next" value="/org/">
+            <button class="btn btn-default googleButton" type="submit">
+              Sign in with Google
+            </button>
+          </form>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
+          <div id="chartioOr" class="other-logins">
+            <div class="text-center">or your Chartion account</div>
+          </div>
 
-  <body>
+          <form onsubmit="onSubmit()" id="chartioAuth" method="post" target="_top">
+            <!-- we'll exempt implementing csrftoken middleware now since this isn't a serious project -->
+            <div class="form-group">
+              <label for="id_username">Email</label>
+              <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="254"
+                placeholder="email@example.com" class="chartioInput" required id="id_username">
+              <div class="helptext"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+              <label for="id_password">Password</label>
+              <input type="password" name="password" autocomplete="current-password" placeholder="password"
+                class="chartioInput" required id="id_password">
+              <div class="helptext"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div id="captcha-container"></div>
+            <div>
+              <button id="chartioSubmit" type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+            <div class="clearfix"></div>
+            <div class="text-right"></div>
+          </form>
 
-  </body>
-
-</html>
+          <div class="footer">
+            <hr class="separator">
+            <div class="under-window-form">
+              <a href="/users/password/reset/" target="_top">Forgot password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

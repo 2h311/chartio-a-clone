@@ -17,8 +17,17 @@ def start_app():
 
 
 app = start_app()
+
+
 @app.get("/")
 async def root(request: Request):
-    return templates.TemplateResponse("chartio/index.html", context={"request": request})
+    return templates.TemplateResponse(
+        "chartio/index.html", context={"request": request}
+    )
 
 
+@app.get("/login")
+async def login(request: Request):
+    return templates.TemplateResponse(
+        "chartio/login.html", context={"request": request}
+    )

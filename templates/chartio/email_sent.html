@@ -15,6 +15,7 @@
 </style>
 {% endblock %}
 
+
 {% block body_content %}
 
 <div class="container">
@@ -24,21 +25,20 @@
         <div class="text-center">
           <h1>Reset password</h1>
         </div>
-        <form action="" method="post">
-          <!-- let's skip the csrfmiddlewaretoken for now, we can add on a more serious project -->
-          <div class="form-group">
-            <input type="email" name="email" autocomplete="email" maxlength="254" placeholder="email@example.com"
-              required id="id_email">
+        <div class="text-center">
+          <p class="lead">
+            Password reset email sent successfully!
+            <br>
+          </p>
+          <div>
+            <a href="/login/" class="btn btn-lg btn-default">
+              <span class="fas fa-arrow-left"> </span> Log in
+            </a>
           </div>
-          <button class="btn btn-primary" type="submit">
-            Reset password
-          </button>
-        </form>
-      </div>
-      <div class="under-window-form">
-        <a href="/login/">Log in</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 {% endblock %}

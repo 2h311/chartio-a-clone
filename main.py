@@ -8,6 +8,7 @@ templates = Jinja2Templates(directory="templates")
 
 def mount_static(app):
     app.mount("/assets", StaticFiles(directory="static"), name="static")
+    app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 def start_app():
@@ -35,4 +36,13 @@ async def login(request: Request):
 
 @app.get("/users/password/reset/")
 async def password_reset(request: Request):
-    return templates.TemplateResponse("chartio/password_reset.html", context={"request": request})
+    return templates.TemplateResponse(
+        "chartio/password_reset.html", context={"request": request}
+    )
+
+
+@app.get("/users/password/reset/email-sent")
+async def password_reset(request: Request):
+    return templates.TemplateResponse(
+        "chartio/email_sent.html", context={"request": request}
+    )

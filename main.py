@@ -34,7 +34,7 @@ async def login(request: Request):
     )
 
 
-@app.get("/users/password/reset/")
+@app.get("/users/password/reset")
 async def password_reset(request: Request):
     return templates.TemplateResponse(
         "chartio/password_reset.html", context={"request": request}
@@ -46,3 +46,8 @@ async def password_reset(request: Request):
     return templates.TemplateResponse(
         "chartio/email_sent.html", context={"request": request}
     )
+
+
+@app.get("/product/support")
+async def support(request: Request):
+    return templates.TemplateResponse("chartio/support.html", context={"request": request})

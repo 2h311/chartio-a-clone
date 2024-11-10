@@ -1,10 +1,12 @@
+from pathlib import Path
 from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
 
 
-templates = Jinja2Templates(directory="templates")
 router = APIRouter(include_in_schema=False)
-
+templates = Jinja2Templates(
+    directory=str(Path(__file__).resolve().parent / "templates")
+)
 
 @router.get("/")
 async def root(request: Request):
